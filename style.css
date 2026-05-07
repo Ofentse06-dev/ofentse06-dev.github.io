@@ -1,0 +1,165 @@
+/* ========================= */
+/* style.css */
+/* ========================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: Arial, sans-serif;
+  background:#f5efe6;
+  color:#333;
+  opacity:0;
+  transition:opacity 0.5s ease-in-out;
+}
+
+body.loaded{
+  opacity:1;
+}
+
+/* NAVBAR */
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:25px 10%;
+}
+
+.logo{
+  font-size:28px;
+}
+
+.nav-links{
+  display:flex;
+  list-style:none;
+  gap:25px;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:black;
+  font-size:18px;
+}
+
+.nav-links a:hover{
+  color:gray;
+}
+
+/* HERO */
+
+.hero{
+  text-align:center;
+  margin-top:40px;
+}
+
+.profile-img{
+  width:250px;
+  height:250px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+.intro{
+  margin-top:20px;
+  font-size:18px;
+}
+
+h1{
+  font-size:55px;
+}
+
+.role{
+  color:gray;
+  margin-top:10px;
+}
+
+/* BUTTONS */
+
+.buttons{
+  margin-top:30px;
+}
+
+.btn-outline{
+  border:2px solid black;
+  padding:12px 25px;
+  border-radius:30px;
+  text-decoration:none;
+  color:black;
+  margin-right:10px;
+}
+
+.btn-filled{
+  background:black;
+  color:white;
+  padding:12px 25px;
+  border-radius:30px;
+  text-decoration:none;
+}
+
+.btn-outline:hover,
+.btn-filled:hover{
+  opacity:0.8;
+}
+
+/* SOCIALS */
+
+.socials{
+  margin-top:25px;
+}
+
+.socials a{
+  margin:0 15px;
+  text-decoration:none;
+  color:black;
+  font-weight:bold;
+}
+
+/* PAGE SECTION */
+
+.page-section{
+  padding:80px 10%;
+  text-align:center;
+}
+
+.page-section h1{
+  margin-bottom:30px;
+}
+
+/* CARDS */
+
+.card{
+  background:#e6ddd3;
+  padding:30px;
+  border-radius:20px;
+  margin:20px auto;
+  max-width:400px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  nav{
+    flex-direction:column;
+  }
+
+  .nav-links{
+    margin-top:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  h1{
+    font-size:40px;
+  }
+
+  .profile-img{
+    width:180px;
+    height:180px;
+  }
+
+}
