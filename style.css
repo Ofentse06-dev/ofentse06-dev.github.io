@@ -214,8 +214,6 @@ nav{
   text-align:left;
   box-shadow:0 5px 20px rgba(0,0,0,0.08);
 }
-
-/* ===================================== */
 /* SKILLS SECTION */
 /* ===================================== */
 
@@ -232,12 +230,16 @@ nav{
   width:200px;
   padding:30px;
   border-radius:25px;
-  transition:0.3s;
+
+  /* ❌ REMOVED TRANSITION */
+  transition:none;
+
   box-shadow:0 5px 15px rgba(0,0,0,0.08);
 }
 
 .skill-card:hover{
-  transform:translateY(-10px);
+  /* ❌ REMOVED MOVEMENT */
+  transform:none;
 }
 
 .skill-card img{
@@ -254,6 +256,8 @@ nav{
   margin-top:10px;
   color:#6D7B8D;
 }
+
+
 
 /* ===================================== */
 /* PROJECTS SECTION */
