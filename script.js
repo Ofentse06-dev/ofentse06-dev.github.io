@@ -1,53 +1,93 @@
 // =====================================
-// script.js (FIXED - NO ANIMATIONS BUGS)
+// script.js (KEEP ANIMATIONS, EXCEPT EXPERIENCE PAGE)
 // =====================================
 
 
-// OPTIONAL: PAGE LOAD CLASS (SAFE)
+// CHECK CURRENT PAGE
+const isExperiencePage = window.location.pathname.includes("experience.html");
+
+
+// =====================================
+// PAGE LOAD FADE (KEEP THIS)
+// =====================================
+
 window.addEventListener("load", () => {
   document.body.classList.add("loaded");
 });
 
 
 // =====================================
-// REMOVE PAGE FADE TRANSITION (BUG CAUSE)
+// PAGE TRANSITION (KEEP THIS)
 // =====================================
 
-// ❌ Removed link fade-out navigation
-// This was causing delay + weird behavior
+document.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", function(e){
+
+    const href = this.getAttribute("href");
+
+    if(href && href.includes(".html")){
+      e.preventDefault();
+
+      document.body.classList.remove("loaded");
+
+      setTimeout(() => {
+        window.location.href = href;
+      }, 500);
+    }
+
+  });
+});
 
 
 // =====================================
-// REMOVE SCROLL ANIMATION (MAIN FIX)
+// SCROLL ANIMATION (FIXED)
 // =====================================
-
-// ❌ We REMOVE opacity + transform manipulation completely
-// so elements stay visible always
 
 const cards = document.querySelectorAll(
   ".skill-card, .project-card, .about-paragraph, .contact-card"
 );
 
-// DO NOTHING ON SCROLL (FIX)
-window.addEventListener("scroll", () => {
-  // intentionally empty
-});
+
+// ❌ ONLY RUN ANIMATION IF NOT EXPERIENCE PAGE
+if(!isExperiencePage){
+
+  // INITIAL STATE
+  cards.forEach(card => {
+    card.style.opacity = "0";
+    card.style.transform = "translateY(40px)";
+    card.style.transition = "all 0.6s ease";
+  });
+
+  window.addEventListener("scroll", () => {
+
+    cards.forEach(card => {
+
+      const cardTop = card.getBoundingClientRect().top;
+      const screenPosition = window.innerHeight / 1.2;
+
+      if(cardTop < screenPosition){
+        card.style.opacity = "1";
+        card.style.transform = "translateY(0)";
+      }
+
+    });
+
+  });
+
+} else {
+
+  // EXPERIENCE PAGE → FORCE EVERYTHING VISIBLE
+  cards.forEach(card => {
+    card.style.opacity = "1";
+    card.style.transform = "none";
+    card.style.transition = "none";
+  });
+
+}
 
 
 // =====================================
-// REMOVE INITIAL HIDING (CRITICAL FIX)
-// =====================================
-
-// ❌ REMOVED:
-// cards.forEach(card => {
-//   card.style.opacity = "0";
-//   card.style.transform = "translateY(40px)";
-//   card.style.transition = "all 0.6s ease";
-// });
-
-
-// =====================================
-// TYPING EFFECT (SAFE - KEEP THIS)
+// TYPING EFFECT (KEEP THIS)
 // =====================================
 
 const roleText = document.querySelector(".role");
