@@ -298,40 +298,93 @@ nav{
   margin-top:15px;
   line-height:1.7;
   color:#555;
+}/* ========================= */
+/* CONTACT PAGE DRAMA */
+/* ========================= */
+
+.contact-section {
+    text-align: center;
+    padding: 80px 20px;
+    animation: fadeInUp 1s ease;
 }
 
-/* ===================================== */
-/* CONTACT SECTION */
-/* ===================================== */
-
-.contact-container{
-  display:flex;
-  justify-content:center;
-  margin-top:50px;
+.contact-title {
+    font-size: 42px;
+    color: #38bdf8;
+    animation: glow 2s infinite alternate;
 }
 
-.contact-card{
-  background:#E7DED3;
-  padding:40px;
-  border-radius:25px;
-  width:500px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+.contact-subtitle {
+    color: #94a3b8;
+    margin-top: 10px;
+    margin-bottom: 40px;
 }
 
-.contact-card p{
-  margin:20px 0;
-  font-size:18px;
+/* CARD */
+.contact-card {
+    background: #1e293b;
+    max-width: 500px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 15px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+
+    animation: floatCard 3s ease-in-out infinite;
 }
 
-.contact-card a{
-  text-decoration:none;
-  color:#2F2F2F;
-  font-weight:bold;
+/* LINKS */
+.contact-card a {
+    color: #38bdf8;
+    text-decoration: none;
 }
 
-.contact-card a:hover{
-  color:#6D7B8D;
+.contact-card a:hover {
+    text-decoration: underline;
 }
+
+/* ICON ANIMATION */
+.contact-card i {
+    margin-right: 10px;
+    color: #38bdf8;
+}
+
+/* ========================= */
+/* ANIMATIONS */
+/* ========================= */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #38bdf8;
+    }
+    to {
+        text-shadow: 0 0 25px #38bdf8;
+    }
+}
+
+@keyframes floatCard {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
 
 /* ===================================== */
 /* FOOTER */
