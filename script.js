@@ -108,4 +108,18 @@ if(roleText){
   }
 
   typeEffect();
+  // ONLY apply animation to THESE, not contact page
+const cards = document.querySelectorAll(".skill-card, .project-card, .about-paragraph");
+
+window.addEventListener("scroll", () => {
+  cards.forEach(card => {
+    const cardTop = card.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight / 1.2;
+
+    if(cardTop < screenPosition){
+      card.style.opacity = "1";
+      card.style.transform = "translateY(0)";
+    }
+  });
+});
 }
