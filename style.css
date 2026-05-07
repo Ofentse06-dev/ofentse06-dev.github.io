@@ -463,5 +463,14 @@ footer{
   .contact-card{
     width:100%;
   }
-
+/* FORCE CONTACT CONTENT TO BE VISIBLE */
+.contact-section,
+.contact-card,
+.contact-card p,
+.contact-card a {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+    display: block;
+}
 }
