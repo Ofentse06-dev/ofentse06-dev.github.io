@@ -1,28 +1,106 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Projects</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: white;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px;
+            background: #111827;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 32px;
+            color: #38bdf8;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 40px;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 15px;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background: #334155;
+        }
+
+        .card h2 {
+            color: #38bdf8;
+            font-size: 20px;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #cbd5e1;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 12px;
+            background: #38bdf8;
+            color: black;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #111827;
+            margin-top: 30px;
+        }
+    </style>
 </head>
+
 <body>
 
-<nav>
-  <h2 class="logo">Portfolio</h2>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="experience.html">Experience</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+<header>
+    <h1>My Projects</h1>
+    <p>Showcasing my development work</p>
+</header>
 
-<h1>Projects</h1>
+<div class="container">
 
-<div class="card">
-  <h3>MusicBox App</h3>
-  <p>Android music streaming app</p>
+    <div class="card">
+        <h2>Student Management System</h2>
+        <p>Java console application using OOP principles to manage student records (Add, View, Search, Update, Delete).</p>
+        <a class="btn" href="https://github.com/yourusername/Student-Management-System" target="_blank">View Code</a>
+    </div>
+
+    <div class="card">
+        <h2>Portfolio Website</h2>
+        <p>Personal responsive portfolio built with HTML, CSS, and JavaScript.</p>
+        <a class="btn" href="#" target="_blank">View Code</a>
+    </div>
+
 </div>
+
+<footer>
+    <p>© 2026 My Portfolio | Built with HTML & CSS</p>
+</footer>
 
 </body>
 </html>
