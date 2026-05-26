@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>My Portfolio</title>
 
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
 * {
     margin: 0;
@@ -58,7 +61,7 @@ nav a:hover {
 }
 
 .hero h2 {
-    font-size: 40px;
+    font-size: 45px;
     color: #38bdf8;
 }
 
@@ -68,14 +71,30 @@ nav a:hover {
     color: #cbd5e1;
 }
 
+/* BUTTONS */
+.btn-group {
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .btn {
-    margin-top: 20px;
-    padding: 10px 20px;
+    padding: 10px 18px;
+    background: #1e293b;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn:hover {
     background: #38bdf8;
     color: black;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
 }
 
 /* SECTIONS */
@@ -93,6 +112,7 @@ section {
 .about p {
     max-width: 700px;
     color: #cbd5e1;
+    line-height: 1.6;
 }
 
 /* SKILLS */
@@ -133,8 +153,8 @@ section {
 
 .card p {
     color: #cbd5e1;
-    font-size: 14px;
     margin-top: 10px;
+    font-size: 14px;
 }
 
 /* CONTACT */
@@ -155,7 +175,7 @@ footer {
 
 <body>
 
-<!-- NAV -->
+<!-- NAVBAR -->
 <nav>
     <h1>Ofentse Dev</h1>
     <div>
@@ -170,8 +190,27 @@ footer {
 <!-- HERO -->
 <section class="hero" id="home">
     <h2>Hi, I'm a Java Developer</h2>
-    <p>I build clean, simple, and efficient software applications</p>
-    <a class="btn" href="#projects">View My Work</a>
+    <p>I build clean, modern, and efficient software applications</p>
+
+    <div class="btn-group">
+
+        <a class="btn" href="projects.html">
+            <i class="fas fa-folder"></i> Projects
+        </a>
+
+        <a class="btn" href="CV.pdf" target="_blank">
+            <i class="fas fa-file"></i> CV
+        </a>
+
+        <a class="btn" href="https://github.com/YOUR-USERNAME" target="_blank">
+            <i class="fab fa-github"></i> GitHub
+        </a>
+
+        <a class="btn" href="https://linkedin.com/in/YOUR-PROFILE" target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+
+    </div>
 </section>
 
 <!-- ABOUT -->
@@ -180,7 +219,7 @@ footer {
     <p>
         I am an aspiring software developer focused on Java and web development.
         I enjoy building real-world projects that solve problems and improve my skills.
-        My goal is to become a professional full-stack developer.
+        I am currently building my portfolio to become a professional full-stack developer.
     </p>
 </section>
 
@@ -189,6 +228,7 @@ footer {
     <h2 class="section-title">Skills</h2>
     <div class="skills">
         <div class="skill">Java</div>
+        <div class="skill">OOP</div>
         <div class="skill">HTML</div>
         <div class="skill">CSS</div>
         <div class="skill">JavaScript</div>
@@ -196,19 +236,20 @@ footer {
     </div>
 </section>
 
-<!-- PROJECTS -->
+<!-- PROJECTS PREVIEW -->
 <section id="projects">
     <h2 class="section-title">Projects</h2>
+
     <div class="projects">
 
         <div class="card">
             <h3>Student Management System</h3>
-            <p>Java OOP project with full CRUD functionality.</p>
+            <p>Java OOP project with CRUD operations (Add, View, Update, Delete).</p>
         </div>
 
         <div class="card">
             <h3>Portfolio Website</h3>
-            <p>Responsive personal portfolio using HTML & CSS.</p>
+            <p>Responsive personal portfolio built using HTML and CSS.</p>
         </div>
 
     </div>
@@ -217,14 +258,15 @@ footer {
 <!-- CONTACT -->
 <section id="contact" class="contact">
     <h2 class="section-title">Contact</h2>
-    <p>Email: yourname@email.com</p>
-    <p>GitHub: github.com/yourusername</p>
-    <p>LinkedIn: linkedin.com/in/yourprofile</p>
+    <p>Email: Matheofentse322@gmail.com</p>
+    <p>GitHub: github.com/</p>
+    <p>LinkedIn: linkedin.com/in/Ofentse Mathe</p>
 </section>
 
+<!-- FOOTER -->
 <footer>
     <p>© 2026 Ofentse | Built with HTML, CSS & Java</p>
 </footer>
 
 </body>
-</html>
+</html> 
