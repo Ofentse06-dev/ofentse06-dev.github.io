@@ -463,6 +463,18 @@ footer{
   .contact-card{
     width:100%;
   }
+
+.cv-btn{
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #000;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+
 /* FORCE CONTACT CONTENT TO BE VISIBLE */
 .contact-section,
 .contact-card,
