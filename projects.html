@@ -31,6 +31,49 @@
 
     /* ===== NAVIGATION ===== */
    
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:25px 10%;
+}
+
+.logo{
+  font-size:30px;
+  font-weight:bold;
+  color:#2F2F2F;
+}
+
+.nav-links{
+  display:flex;
+  list-style:none;
+  gap:25px;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:#2F2F2F;
+  font-size:18px;
+  transition:0.3s;
+  position:relative;
+}
+
+/* UNDERLINE EFFECT */
+
+.nav-links a::after{
+  content:"";
+  position:absolute;
+  width:0%;
+  height:2px;
+  left:0;
+  bottom:-5px;
+  background:#6D7B8D;
+  transition:0.3s;
+}
+
+.nav-links a:hover::after{
+  width:100%;
+}
 
     /* ===== HERO ===== */
     .hero {
