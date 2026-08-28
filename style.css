@@ -272,7 +272,7 @@ nav{
 }
 
 .project-card{
-  background:#E7DED3;
+  background:#F5F1E8;
   width:320px;
   border-radius:25px;
   padding:25px;
@@ -298,6 +298,7 @@ nav{
   margin-top:15px;
   line-height:1.7;
   color:#555;
+}
 }/* ========================= */
 /* CONTACT PAGE */
 /* ========================= */
